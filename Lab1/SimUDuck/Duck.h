@@ -34,7 +34,7 @@ public:
 		m_flyBehavior->Fly();
 	}
 
-	// const потому что не меняет состояние объекта
+	// const ГЇГ®ГІГ®Г¬Гі Г·ГІГ® Г­ГҐ Г¬ГҐГ­ГїГҐГІ Г±Г®Г±ГІГ®ГїГ­ГЁГҐ Г®ГЎГєГҐГЄГІГ 
 	void Dance() 
 	{
 		m_danceBehavior->Dance();
@@ -47,21 +47,21 @@ public:
 
 	virtual void Display() const = 0;
 
-	// что будет если это не указать?
-	// например:
+	// Г·ГІГ® ГЎГіГ¤ГҐГІ ГҐГ±Г«ГЁ ГЅГІГ® Г­ГҐ ГіГЄГ Г§Г ГІГј?
+	// Г­Г ГЇГ°ГЁГ¬ГҐГ°:
 	// Duck* duck = new MallardDuck()
-	// без виртулального деструктора вызовется ~Duck(), а не ~MallardDuck()
-	// утечка памяти, MallardDuck не разрушится полностью
+	// ГЎГҐГ§ ГўГЁГ°ГІГіГ«Г Г«ГјГ­Г®ГЈГ® Г¤ГҐГ±ГІГ°ГіГЄГІГ®Г°Г  ГўГ»Г§Г®ГўГҐГІГ±Гї ~Duck(), Г  Г­ГҐ ~MallardDuck()
+	// ГіГІГҐГ·ГЄГ  ГЇГ Г¬ГїГІГЁ, MallardDuck Г­ГҐ Г°Г Г§Г°ГіГёГЁГІГ±Гї ГЇГ®Г«Г­Г®Г±ГІГјГѕ
 	virtual ~Duck() = default;
-	// виртуальный - delete вызовет правильный деструктор
-	// не виртуальный - delete вызовет только деструктор базового класса
+	// ГўГЁГ°ГІГіГ Г«ГјГ­Г»Г© - delete ГўГ»Г§Г®ГўГҐГІ ГЇГ°Г ГўГЁГ«ГјГ­Г»Г© Г¤ГҐГ±ГІГ°ГіГЄГІГ®Г°
+	// Г­ГҐ ГўГЁГ°ГІГіГ Г«ГјГ­Г»Г© - delete ГўГ»Г§Г®ГўГҐГІ ГІГ®Г«ГјГЄГ® Г¤ГҐГ±ГІГ°ГіГЄГІГ®Г° ГЎГ Г§Г®ГўГ®ГЈГ® ГЄГ«Г Г±Г±Г 
 
 private:
 	std::unique_ptr<IFlyBehavior> m_flyBehavior{};
 	std::unique_ptr<IQuackBehavior> m_quackBehavior{};
 	std::unique_ptr<IDanceBehavior> m_danceBehavior{};
 
-	// крякание с удовольствием
+	// ГЄГ°ГїГЄГ Г­ГЁГҐ Г± ГіГ¤Г®ГўГ®Г«ГјГ±ГІГўГЁГҐГ¬
 	void QuackWithPleasure()
 	{
 		if (m_flyBehavior->CanFly() && m_flyBehavior->GetFlyCount() % 2 == 0)
