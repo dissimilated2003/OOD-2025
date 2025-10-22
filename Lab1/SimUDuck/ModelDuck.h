@@ -5,7 +5,7 @@
 #include "NothingDance.h"
 #include "QuackBehavior.h"
 
-// смоделированая утка - искусственная утка
+// СЃРјРѕРґРµР»РёСЂРѕРІР°РЅРЅР°СЏ СѓС‚РєР° - РёСЃРєСѓСЃСЃС‚РІРµРЅРЅР°СЏ СѓС‚РєР°
 class ModelDuck : public Duck
 {
 public:
@@ -21,4 +21,5 @@ public:
 	{
 		std::cout << "I'm model duck" << std::endl;
 	}
+
 };
