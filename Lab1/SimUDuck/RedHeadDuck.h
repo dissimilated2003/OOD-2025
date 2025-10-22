@@ -5,7 +5,7 @@
 #include "FlyWithWings.h"
 #include "MinuetDance.h"
 
-// красноголовая утка - естественная утка
+// РєСЂР°СЃРЅРѕРіРѕР»РѕРІР°СЏ СѓС‚РєР° - РµСЃС‚РµСЃС‚РІРµРЅРЅР°СЏ СѓС‚РєР°
 class RedHeadDuck : public Duck
 {
 public:
@@ -21,4 +21,5 @@ public:
 	{
 		std::cout << "I'm redhead duck" << std::endl;
 	}
+
 };
