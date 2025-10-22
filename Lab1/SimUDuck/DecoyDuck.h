@@ -8,7 +8,7 @@
 #include "NothingDance.h"
 #include "Duck.h"
 
-// декоративная утка - искусственная утка
+// РґРµРєРѕСЂР°С‚РёРІРЅР°СЏ СѓС‚РєР° - РёСЃРєСѓСЃСЃС‚РІРµРЅРЅР°СЏ СѓС‚РєР°
 class DecoyDuck : public Duck
 {
 public:
@@ -24,4 +24,5 @@ public:
 	{
 		std::cout << "I'm decoy duck" << std::endl;
 	}
+
 };
