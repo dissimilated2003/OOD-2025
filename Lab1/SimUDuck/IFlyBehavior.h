@@ -3,9 +3,10 @@
 struct IFlyBehavior
 {
 	virtual void Fly() = 0;
-	// добавление состояния к стратегии
+	// РґРѕР±Р°РІР»РµРЅРёРµ СЃРѕСЃС‚РѕСЏРЅРёСЏ Рє СЃС‚СЂР°С‚РµРіРёРё
 	virtual bool CanFly() const = 0;
 	virtual int GetFlyCount() const = 0;
 
 	virtual ~IFlyBehavior() {};
+
 };
