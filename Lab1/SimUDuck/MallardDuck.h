@@ -5,7 +5,7 @@
 #include "FlyWithWings.h"
 #include "QuackBehavior.h"
 
-// кряква - естественная утка
+// РєСЂСЏРєРІР° - РµСЃС‚РµСЃС‚РІРµРЅРЅР°СЏ СѓС‚РєР°
 class MallardDuck : public Duck
 {
 public:
@@ -21,4 +21,5 @@ public:
 	{
 		std::cout << "I'm mallard duck" << std::endl;
 	}
+
 };
