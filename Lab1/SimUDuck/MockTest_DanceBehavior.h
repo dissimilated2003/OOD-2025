@@ -2,11 +2,11 @@
 
 #include "IDanceBehavior.h"
 
-// mock-реализация - вместо настоящей работы запоминает факт вызова
+// mock-СЂРµР°Р»РёР·Р°С†РёСЏ - РІРјРµСЃС‚Рѕ РЅР°СЃС‚РѕСЏС‰РµР№ СЂР°Р±РѕС‚С‹ Р·Р°РїРѕРјРёРЅР°РµС‚ С„Р°РєС‚ РІС‹Р·РѕРІР°
 class MockDanceBehavior : public IDanceBehavior
 {
 public:
-	void Dance() const override // тут запоминает вызов
+	void Dance() const override // С‚СѓС‚ Р·Р°РїРѕРјРёРЅР°РµС‚ РІС‹Р·РѕРІ
 	{
 		++m_danceCallCount;
 		m_wasDanceCalled = true;
@@ -31,4 +31,5 @@ public:
 private:
 	mutable bool m_wasDanceCalled{ false };
 	mutable int m_danceCallCount{ 0 };
+
 };
