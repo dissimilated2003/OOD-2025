@@ -31,6 +31,7 @@ void RunDuck()
 
 int main()
 {
-
+	RunDuck();
+	
 	return EXIT_SUCCESS;
 }
