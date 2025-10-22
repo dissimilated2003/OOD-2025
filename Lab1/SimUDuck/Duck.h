@@ -34,7 +34,8 @@ public:
 		m_flyBehavior->Fly();
 	}
 
-	// const ïîòîìó ÷òî íå ìåíÿåò ñîñòîÿíèå îáúåêòà
+	// const потому что не меняет состояние объекта
+	// хотя щас уже не конст
 	void Dance() 
 	{
 		m_danceBehavior->Dance();
@@ -47,21 +48,14 @@ public:
 
 	virtual void Display() const = 0;
 
-	// ÷òî áóäåò åñëè ýòî íå óêàçàòü?
-	// íàïðèìåð:
-	// Duck* duck = new MallardDuck()
-	// áåç âèðòóëàëüíîãî äåñòðóêòîðà âûçîâåòñÿ ~Duck(), à íå ~MallardDuck()
-	// óòå÷êà ïàìÿòè, MallardDuck íå ðàçðóøèòñÿ ïîëíîñòüþ
 	virtual ~Duck() = default;
-	// âèðòóàëüíûé - delete âûçîâåò ïðàâèëüíûé äåñòðóêòîð
-	// íå âèðòóàëüíûé - delete âûçîâåò òîëüêî äåñòðóêòîð áàçîâîãî êëàññà
 
 private:
 	std::unique_ptr<IFlyBehavior> m_flyBehavior{};
 	std::unique_ptr<IQuackBehavior> m_quackBehavior{};
 	std::unique_ptr<IDanceBehavior> m_danceBehavior{};
 
-	// êðÿêàíèå ñ óäîâîëüñòâèåì
+	// крякание с удовольствием от выполнения лаб
 	void QuackWithPleasure()
 	{
 		if (m_flyBehavior->CanFly() && m_flyBehavior->GetFlyCount() % 2 == 0)
@@ -70,3 +64,4 @@ private:
 		}
 	}
 };
+
