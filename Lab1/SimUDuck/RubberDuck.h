@@ -5,6 +5,7 @@
 #include "SqueakBehavior.h"
 #include "NothingDance.h"
 
+// резиновая утка - искусственная утка
 class RubberDuck : public Duck
 {
 public:
@@ -20,4 +21,5 @@ public:
 	{
 		std::cout << "I'm rubber duck" << std::endl;
 	}
+
 };
