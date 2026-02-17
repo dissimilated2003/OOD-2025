@@ -1,0 +1,20 @@
+rectangle 0 0 800 600 #2244dfff
+rectangle 0 400 800 600 #15c138ff
+
+rectangle 100 300 300 400 #ffbbaaff
+triangle 200 200 100 300 300 300 #cb0701ff
+
+ellipse 400 100 50 30 #ffffffff
+ellipse 450 90 60 40 #ffffffff
+ellipse 510 110 50 30 #ffffffff
+
+ellipse 100 100 70 70 #ceb108ff
+ellipse 100 100 60 60 #f6d40eff
+ellipse 100 100 50 50 #ffff11ff
+
+rectangle 600 280 630 450 #a2592aff
+triangle 600 430 630 450 570 450 #a2592aff
+triangle 630 430 660 450 600 450 #a2592aff
+polygon 615 250 70 8 #41c362ff
+
+text 50 500 44 "the house looks like complete dog shit" #ffffffff
