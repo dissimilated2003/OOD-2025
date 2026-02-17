@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 
-#include "../../../catch2/catch.hpp"
+#include "../../../catch2/catch.hpp" 
 
 #include "../ModifiedGumballMachine/NaiveGumballMachine.h"
 #include "../ModifiedGumballMachine/ModifiedGumballMachine.h"
@@ -16,11 +16,11 @@ public:
         m_oldBuffer = std::cout.rdbuf(m_buffer.rdbuf());
     }
 
-    // copy ctor & copy assign нафиг
+    // copy ctor & copy assign Г­Г ГґГЁГЈ
     CoutCapture(const CoutCapture&) = delete;
     CoutCapture& operator=(const CoutCapture&) = delete;
 
-    // потому что dtor всё делает
+    // ГЇГ®ГІГ®Г¬Гі Г·ГІГ® dtor ГўГ±Вё Г¤ГҐГ«Г ГҐГІ
     ~CoutCapture()
     {
         if (m_oldBuffer)
@@ -216,7 +216,7 @@ TEST_CASE("NaiveGumballMachine edge cases")
         CoutCapture c{};
         NaiveGumballMachine m{ 3 };
         m.Refill(0);
-        REQUIRE(c.Str().empty()); // ничего не выводит
+        REQUIRE(c.Str().empty()); // Г­ГЁГ·ГҐГЈГ® Г­ГҐ ГўГ»ГўГ®Г¤ГЁГІ
         REQUIRE(m.ToString().find("Inventory: 3 gumballs") != std::string::npos);
     }
 
@@ -286,8 +286,8 @@ TEST_CASE("NaiveGumballMachine edge cases")
         m.TurnCrank();
         m.TurnCrank();
         c.Clear();
-        m.TurnCrank();      // это проходит, т.к. в TurnCrank SOLD_OUT проверяется
-                            // раньше чем, NO_QUARTER в switch case
+        m.TurnCrank();      // ГЅГІГ® ГЇГ°Г®ГµГ®Г¤ГЁГІ, ГІ.ГЄ. Гў TurnCrank SOLD_OUT ГЇГ°Г®ГўГҐГ°ГїГҐГІГ±Гї
+                            // Г°Г Г­ГјГёГҐ Г·ГҐГ¬, NO_QUARTER Гў switch case
         REQUIRE(c.Str().find("You turned but there's no gumballs") != std::string::npos);
     }
 }
@@ -410,4 +410,5 @@ TEST_CASE("Refill in all states (except Sold) keeping coins")
             REQUIRE(m.ToString().find("Coins: 4/5 quarters") != std::string::npos);
         }
     }
+
 }
